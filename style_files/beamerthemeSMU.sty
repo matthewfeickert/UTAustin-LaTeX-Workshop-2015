@@ -1,0 +1,24 @@
+\ProvidesPackageRCS $Header: beamerthemeArgonne.sty,v 1.8 2004/10/07 20:53:10 tantau Exp $
+
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+%\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\useoutertheme{infolinesSMU}
+\usecolortheme{SMU}
+\usefonttheme[onlylarge]{structurebold}
+ 
+\setbeamercolor{titlelike}{parent=structure}
+
+\setbeamertemplate{itemize item}{$\blacksquare$}
+\setbeamertemplate{itemize subitem}{$\blacktriangleright$}
+\setbeamertemplate{itemize subsubitem}{$\diamondsuit$}
+
+\mode
+<all>

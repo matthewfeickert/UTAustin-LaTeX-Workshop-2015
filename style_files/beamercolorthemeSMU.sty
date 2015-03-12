@@ -1,0 +1,63 @@
+\ProvidesPackageRCS $Header: beamercolorthemePN.sty,v 1.8 2004/10/28 17:15:51 tantau Exp $
+
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\mode<presentation>
+
+%Color definitions
+\definecolor{smuwhite}{RGB}{250,247,255}
+\definecolor{smublack}{RGB}{0,0,0}
+\definecolor{smured}{RGB}{200,0,0}
+\definecolor{smulightred}{RGB}{255,102,102}
+\definecolor{smugreen}{RGB}{0,175,0}
+\definecolor{smublue}{RGB}{2,6,178}
+\definecolor{smulightblue}{RGB}{188,194,234}
+\definecolor{magenta}{RGB}{200,0,200}
+
+%Background
+\setbeamercolor{background canvas}{bg=smuwhite}
+
+%Header and footer palletes
+\setbeamercolor{palette primary}{fg=smuwhite,bg=smublue}
+\setbeamercolor{palette secondary}{fg=smuwhite,bg=smured}
+\setbeamercolor{palette tertiary}{fg=smuwhite,bg=smublue}
+\setbeamercolor{palette quaternary}{fg=smuwhite,bg=smulightred}
+
+
+%Structure: sections, subsections, etc.
+\setbeamercolor{structure}{fg=smured}
+
+%Transparency of the ``covered'' text
+\setbeamercovered{transparent=50}
+
+%Math color text
+\setbeamercolor{math text}{fg=smured}
+\setbeamercolor{normal text in math text}{fg=smublack}
+
+
+%Other colors
+
+\setbeamercolor{titlelike}{parent=palette quaternary}
+
+\setbeamercolor{block title}{fg=smublue,bg=smulightblue}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!25!bg}
+
+\setbeamercolor{block title alerted}{use=alerted text,fg=smublue,bg=smulightblue!25!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,fg=smured,bg=smulightblue!25!bg}
+
+\setbeamercolor{block title example}{use=example text,fg=smured,bg=example text.fg!75!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!25!bg}
+
+\setbeamercolor{sidebar}{bg=smured!70}
+  
+\setbeamercolor{palette sidebar primary}{fg=smured}
+\setbeamercolor{palette sidebar secondary}{fg=smured!75}
+\setbeamercolor{palette sidebar tertiary}{fg=smured!75}
+\setbeamercolor{palette sidebar quaternary}{fg=smured}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>
