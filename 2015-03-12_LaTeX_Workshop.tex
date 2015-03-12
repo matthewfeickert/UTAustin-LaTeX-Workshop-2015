@@ -302,13 +302,143 @@ Stuff and things go here
 \end{verbatim}
 \end{frame}
 
+\subsection*{Figure Basics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Inserting Figures}
+\small\begin{verbatim}
+\documentclass[letterpaper,12pt]{article}
+...
+\usepackage{graphicx}
+%\graphicspath{{Images/}} %Overleaf has frog.jpg in the 
+						  %local dir but in general set 
+						  %to your dir with figures 
+...
+\begin{document}
+...
+\begin{figure}
+\includegraphics[width=\textwidth]{frog.jpg}
+\end{figure}
+...
+\end{document}
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Inserting Figures}
+\begin{figure}
+\includegraphics[width=0.50\textwidth]{frog.pdf}
+%\label{Fig:frogA}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Better Figures}
+\small\begin{verbatim}
+\documentclass[letterpaper,12pt]{article}
+...
+\usepackage{graphicx}
+%\graphicspath{{Images/}}
+...
+\begin{document}
+...
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=\textwidth]{frog.jpg}
+\caption{This is a frog!}
+\label{Fig:frog}
+\end{figure}
+...
+\end{document}
+\end{verbatim}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Better Figures}
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.50\textwidth]{frog.pdf}
+\caption{This is a frog!}
+\label{Fig:frogB}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Rescaling Figures}
+\small\begin{verbatim}
+\documentclass[letterpaper,12pt]{article}
+...
+\usepackage{graphicx}
+%\graphicspath{{Images/}}
+...
+\begin{document}
+...
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[scale=0.40]{frog.jpg}
+\caption{This is a frog!}
+\label{Fig:frog}
+\end{figure}
+...
+\end{document}
+\end{verbatim}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Rescaling Figures}
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[scale=0.40]{frog.pdf}
+\caption{This is a frog!}
+\label{Fig:frogC}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Rescaling Figures}
+\small\begin{verbatim}
+\documentclass[letterpaper,12pt]{article}
+...
+\usepackage{graphicx}
+%\graphicspath{{Images/}}
+...
+\begin{document}
+...
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.80\textwidth]{frog.jpg}
+\caption{This is a frog!}
+\label{Fig:frog}
+\end{figure}
+...
+\end{document}
+\end{verbatim}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Rescaling Figures}
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.35\textwidth]{frog.pdf}
+\caption{This is a frog!}
+\label{Fig:frogD}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Math Mode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Typesetting in Math Mode}
-Typesetting in Math Mode is what really gives \LaTeX~its power. It is intuitive, quick, clean, and produces wonderful results! To initiate Math Mode enclose whatever you want to typeset between two ``\$''.
+Typesetting in Math Mode is what really gives \LaTeX{} its power. It is intuitive, quick, clean, and produces wonderful results! To initiate Math Mode enclose whatever you want to typeset between two ``\$''.
 	\begin{block}{Some examples}
 		\begin{itemize}
     			\item \$\textbackslash Sigma\$ = $\Sigma$
