@@ -1,4 +1,5 @@
 \documentclass[]{beamer}
+\setbeamertemplate{caption}[numbered]	% For numbered figures
 
 \mode<presentation>
 % Setup appearance:
@@ -30,7 +31,6 @@
 \usepackage{amsmath}  		% For math
 \usepackage{amssymb}  		% For more math
 \usepackage{mathrsfs}			%Fancy math, needed for Lagrangian scripts
-\usepackage{feynmf}
 \usepackage[normalem]{ulem} % For strikethrough
 \usepackage{verbatim}		% For verbatim comments	Note: Must Declare the frame fragile first. \begin{frame}[fragile]
 %\usepackage{multimedia}	% For movies
@@ -54,7 +54,6 @@
 \usepackage{pst-node}
 \usepackage{slashed}
 \usepackage{graphicx} 	% For images
-\usepackage{grffile}		% Allow for spaces in file names
 \graphicspath{{Images/}}
 
 %\usepackage{mathtools}
@@ -71,7 +70,7 @@
 
 % Author, Title, etc.
 
-\title[\LaTeX~Workshop for UT Austin GPS] 
+\title[\LaTeX~Workshop for UT Austin SEG] 
 {%
 \LaTeX~Workshop for UT Austin\\ Geophysical Society%
 }
@@ -136,7 +135,8 @@
 %%%%%%%%%%%%%%%%%   FIGURE   %%%%%%%%%%%%%%%%%
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.35]{CTAN_Lion.pdf}
+%\includegraphics[scale=0.35]{CTAN_Lion.pdf}
+\includegraphics[width=\textwidth]{CTAN_Lion.pdf}
 \caption{\href{http://www.ctan.org/lion/}{CTAN} lion drawing by Duane Bibby.}
 %\label{fig:}
 \end{figure}
@@ -216,12 +216,12 @@ For today's workshop we're going to be using a web front end: \textcolor{green!8
 \begin{enumerate}
 	\item Navigate to \href{https://www.overleaf.com/}{www.overleaf.com}
 	\item Click the \href{https://www.overleaf.com/docs?template=overleaf}{``Create A New Paper'' button}
-\begin{figure}[h!tbp]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.40]{Overleaf_Create_Paper.png}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\item Once the template is loaded, click the ''Source'' button in the upper left corner
+		\item Once the template is loaded, click the ``Source'' button in the upper left corner
 		\item We're going to start from scratch, so select all and delete
 \end{enumerate}
 \end{frame}
@@ -343,7 +343,7 @@ Stuff and things go here
 ...
 \begin{document}
 ...
-\begin{figure}[h!tbp]
+\begin{figure}[!htbp]  %here, top, bottom, page.
 \centering
 \includegraphics[width=\textwidth]{frog.jpg}
 \caption{This is a frog!}
@@ -357,7 +357,7 @@ Stuff and things go here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Better Figures}
-\begin{figure}[h!tbp]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.50\textwidth]{frog.pdf}
 \caption{This is a frog!}
@@ -718,6 +718,36 @@ The Lagrangian for the ABC ``toy'' theory containing three elementary particles 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Figure: Example}
+\begin{verbatim}
+%%%%%%%%%%%%%%%%%   FIGURE   %%%%%%%%%%%%%%%%%
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[scale=0.40]{frog.pdf}
+\caption{Here is a very interesting picture of a frog.}
+\label{fig:frog}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Noting Figure~\ref{fig:frog}, it is seen that\ldots
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Figure: Example}
+%%%%%%%%%%%%%%%%%   FIGURE   %%%%%%%%%%%%%%%%%
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[scale=0.40]{frog.pdf}
+\caption{Here is a very interesting picture of a frog.}
+\label{fig:frog}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Noting Figure~\ref{fig:frog}, it is seen that\ldots
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Table}
 \begin{verbatim}
 %%%%%%%%%%%%%%%%%   TABLE   %%%%%%%%%%%%%%%%%
@@ -749,6 +779,32 @@ The Lagrangian for the ABC ``toy'' theory containing three elementary particles 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Equation: Example}
+\begin{verbatim}
+%%%%%%%%%%%   EQUATION   %%%%%%%%%%%
+\begin{equation}
+\alpha + \beta = \gamma
+\label{eq:alpha}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Here is Equation~\ref{eq:alpha}.
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Equation: Example}
+%%%%%%%%%%%   EQUATION   %%%%%%%%%%%
+\begin{equation}
+\alpha + \beta = \gamma
+\label{eq:alpha}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Here is Equation~\ref{eq:alpha}.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Matrix}
 \begin{verbatim}
 %%%%%%%%%%%  MATRIX   %%%%%%%%%%%
@@ -757,6 +813,32 @@ X & X\\
 \end{pmatrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Matrix: Example}
+\begin{verbatim}
+%%%%%%%%%%%  MATRIX   %%%%%%%%%%%
+\[
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Matrix: Example}
+%%%%%%%%%%%  MATRIX   %%%%%%%%%%%
+\[
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -769,6 +851,16 @@ Y &= mx + b \\
 \end{split}
 \]
 \end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Split line equation: Example}
+\[
+\begin{split}
+Y 	&= mx + b \\
+	&= \alpha + \epsilon
+\end{split}
+\]
 \end{frame}
 
 \subsection*{}
@@ -803,6 +895,20 @@ Y &= mx + b \\
 \parenthcurl{\frac{\alpha}{\beta}}
 \]
 \ldots This does!
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{How can I use the \$, \#, \_ , \textbackslash  ~symbols in documents?}
+\centering
+You need to put the \textbackslash ~immediately before them:
+\[
+\begin{split}
+\text{\textbackslash}\$	&= \$	\\
+\text{\textbackslash}\#	&= \#	\\
+\text{\textbackslash}\_	&= \_	\\
+\text{\textbackslash}\text{textba}&\text{ckslash} = \text{\textbackslash}
+\end{split}
+\]
 \end{frame}
 
 %%%%%
